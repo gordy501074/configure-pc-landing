@@ -22,13 +22,17 @@ export function BenefitsSection({ data }: { data: AudienceContent }) {
         <p className="mt-4 text-lg text-slate-600">{data.valueSubtitle}</p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <div className="mt-12 flex flex-wrap justify-center gap-6">
         {data.valueCards.map((card) => {
           const Icon = iconMap[card.icon]
+          const cardWidth =
+            data.valueCards.length === 4
+              ? "w-full md:w-[calc(50%-0.75rem)]"
+              : "w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
           return (
             <div
               key={card.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className={`${cardWidth} rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md`}
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 text-white">
                 <Icon className="h-6 w-6" aria-hidden="true" />
