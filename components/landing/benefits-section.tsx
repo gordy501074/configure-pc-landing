@@ -1,4 +1,4 @@
-import { Target, ShieldCheck, Wallet, Zap, Layers } from "lucide-react"
+import { Target, ShieldCheck, Wallet, Zap, Layers, Store, TrendingUp, BarChart3 } from "lucide-react"
 import type { AudienceContent, IconName } from "@/lib/landing-content"
 
 const iconMap: Record<IconName, typeof Target> = {
@@ -7,6 +7,9 @@ const iconMap: Record<IconName, typeof Target> = {
   wallet: Wallet,
   zap: Zap,
   layers: Layers,
+  store: Store,
+  trending: TrendingUp,
+  chart: BarChart3,
 }
 
 export function BenefitsSection({ data }: { data: AudienceContent }) {

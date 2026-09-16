@@ -2,7 +2,15 @@ export const PROJECT_NAME = "Сконфигурируй'Ка"
 
 export type Audience = "b2c" | "b2b"
 
-export type IconName = "target" | "shield" | "wallet" | "zap" | "layers"
+export type IconName =
+  | "target"
+  | "shield"
+  | "wallet"
+  | "zap"
+  | "layers"
+  | "store"
+  | "trending"
+  | "chart"
 
 type ValueCard = {
   icon: IconName
@@ -68,6 +76,11 @@ export const content: Record<Audience, AudienceContent> = {
         title: "Прозрачный выбор",
         text: "Сервис показывает альтернативные варианты и помогает понять, за что вы платите.",
       },
+      {
+        icon: "store",
+        title: "Выбор из нескольких поставщиков",
+        text: "Сравнивайте цены и наличие у разных поставщиков и выбирайте лучшее предложение под одну и ту же сборку.",
+      },
     ],
     howTitle: "Как это работает",
     howSubtitle: "Три простых шага от задачи до подходящей конфигурации.",
@@ -128,6 +141,16 @@ export const content: Record<Audience, AudienceContent> = {
         icon: "layers",
         title: "Единый процесс",
         text: "Собирайте типовые конфигурации и используйте их для повторных продаж и работы с похожими запросами.",
+      },
+      {
+        icon: "trending",
+        title: "Ориентир на цены конкурентов",
+        text: "Сверяйтесь с рыночными ценами конкурентов, чтобы держать предложения в рынке и не терять маржу.",
+      },
+      {
+        icon: "chart",
+        title: "Встроенная аналитика продаж",
+        text: "Отслеживайте продажи и востребованные конфигурации с помощью встроенных средств аналитики.",
       },
     ],
     howTitle: "Как это работает",
